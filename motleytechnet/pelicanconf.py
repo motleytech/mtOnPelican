@@ -32,6 +32,10 @@ AUTHOR_FEED_RSS = None
 DEFAULT_PAGINATION = 5
 
 THEME = "themes/elegant"
+STATIC_PATHS = ['images']
+
+PLUGIN_PATHS = ["plugins"]
+PLUGINS = ["render_math"]
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
