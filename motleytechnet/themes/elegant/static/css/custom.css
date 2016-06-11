@@ -11,6 +11,12 @@
   margin: 0px auto;
 }
 
+.img-width-400 {
+  width: 400px;
+  display: block;
+  margin: 0px auto;
+}
+
 .category-header, .tags-header {
   color: #555;
 }
