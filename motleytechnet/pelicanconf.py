@@ -37,5 +37,10 @@ STATIC_PATHS = ['images']
 PLUGIN_PATHS = ["plugins"]
 PLUGINS = ["render_math"]
 
+LANDING_PAGE_ABOUT = {
+    'title': 'Stuff about me',
+    'details': "This is all so awesome."
+}
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

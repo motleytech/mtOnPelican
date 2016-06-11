@@ -2,3 +2,5 @@
 venv
 
 motleytechnet/output
+motleytechnet/pelican.pid
+motleytechnet/srv.pid
