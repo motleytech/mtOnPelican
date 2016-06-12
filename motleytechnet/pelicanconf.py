@@ -35,7 +35,9 @@ THEME = "themes/elegant"
 STATIC_PATHS = ['images']
 
 PLUGIN_PATHS = ["plugins"]
-PLUGINS = ["render_math"]
+PLUGINS = [
+    "render_math",
+]
 
 LANDING_PAGE_ABOUT = {
     'title': 'Stuff about me',

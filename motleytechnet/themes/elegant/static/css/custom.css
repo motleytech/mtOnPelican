@@ -48,3 +48,13 @@ a.category-link {
 span.normal-font-color {
   color: #222;
 }
+
+div.youtube-16x9-640 {
+  width: 640px;
+  margin: 0px auto;
+}
+
+div.youtube-16x9-640 iframe{
+  width: 640px;
+  height: 360px;
+}
