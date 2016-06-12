@@ -58,3 +58,8 @@ div.youtube-16x9-640 iframe{
   width: 640px;
   height: 360px;
 }
+
+.article-content p a {
+  color: #3875d7 !important;
+  border-bottom: none !important;
+}
