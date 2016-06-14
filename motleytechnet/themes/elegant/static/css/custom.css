@@ -1,20 +1,10 @@
+
+
 .noteworthy-equation div.MathJax_Display {
   border: 10px solid #efd650;
   padding: 15px;
   margin: 25px;
   width: inherit;
-}
-
-.img-center-92 {
-  width: 92%;
-  display: block;
-  margin: 0px auto;
-}
-
-.img-width-400 {
-  width: 400px;
-  display: block;
-  margin: 0px auto;
 }
 
 .category-header, .tags-header {
@@ -62,4 +52,34 @@ div.youtube-16x9-640 iframe{
 .article-content p a {
   color: #3875d7 !important;
   border-bottom: none !important;
+}
+
+/*
+CSS for Images
+*/
+
+.img-center-92 {
+  width: 92%;
+  display: block;
+  margin: 0px auto;
+}
+
+.img-width-400 {
+  width: 400px;
+  display: block;
+  margin: 0px auto;
+}
+
+.img-width-400 img {
+  width: 400px;
+}
+
+.img-width-600 {
+  width: 600px;
+  display: block;
+  margin: 0px auto;
+}
+
+.img-width-600 img {
+  width: 600px;
 }
