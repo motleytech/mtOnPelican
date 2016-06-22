@@ -32,12 +32,20 @@ a.category-link {
   padding: 3px 6px;
 }
 
+a.category-link:hover {
+  text-decoration: underline;
+}
+
 .list-of-tags li {
   line-height: inherit;
 }
 
 .list-of-tags li a {
   color: #3875d7;
+}
+
+.list-of-tags li a:hover {
+  text-decoration: underline;
 }
 
 span.normal-font-color {
@@ -54,10 +62,27 @@ div.youtube-16x9-640 iframe{
   height: 360px;
 }
 
-article p:not(#list-of-translations):not(#post-share-links) a, article ol a, blockquote a, article div.article-content ul:not(.articles-timeline):not(.related-posts-list) a {
+article p:not(#list-of-translations):not(#post-share-links) a,
+article ol a,
+blockquote a,
+article div.article-content ul:not(.articles-timeline):not(.related-posts-list) a,
+div.recent-posts section a {
   border-bottom: none;
   color: #3875d7;
-  text-decoration: inherit;
+  text-decoration: none;
+}
+
+article p:not(#list-of-translations):not(#post-share-links) a:hover,
+article ol a:hover,
+blockquote a:hover,
+article div.article-content ul:not(.articles-timeline):not(.related-posts-list) a:hover,
+div.recent-posts section a:hover {
+  text-decoration: underline;
+}
+
+div.recent-posts section a:hover {
+  border-bottom: none;
+  text-decoration: underline;
 }
 
 /*
@@ -134,6 +159,12 @@ CSS for Images
     border-radius:6px 0 6px 6px;
 }
 
-.dropdown>.dropdown-toggle {
-  margin-left: -10px;
+.navbar .nav .dropdown>.dropdown-toggle {
+  margin-left: -25px;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+.navbar .nav .li-expanded a {
+  padding-right: 25px;
 }
