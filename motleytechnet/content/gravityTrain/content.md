@@ -1,6 +1,6 @@
 Title: Gravity Train
 Date: 2016-06-11 15:25
-Category: Physics
+Category: Blog
 Tags: Physics, Mathematics, Gravity
 Authors: Motleytech
 

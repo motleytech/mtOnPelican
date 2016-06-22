@@ -1,6 +1,6 @@
 Title: Falling into  the sun
 Date: 2012-12-03 10:20
-Category: Physics
+Category: Blog
 Tags: Physics, Mathematics, Gravity, Pi, Sun, Earth, Integration
 Authors: Motleytech
 

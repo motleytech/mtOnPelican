@@ -1,10 +1,10 @@
 Title: Leo Szilard - The Man who changed the World
 Date: 2016-06-14 11:47
-Category: History
-Tags: Leo Szilard, Fission, Manhattan Project, Atomic Bomb, WWII
+Category: Blog
+Tags: Leo Szilard, Fission, Manhattan Project, Atomic Bomb, WWII, History
 Authors: Motleytech
 
-I bet you have not heard the name **Leo Szilard** - I can safely make this bet because even with my professional degrees in physics and engineering (plus a deep interest in history) it took me a very long time to hear about him. Given how well the world knows about his inventions and the effect of this actions, it truly is surprising that how little known this person is. Read on to find out how one man changed the world and impacted it in the most profound ways.
+I bet you have not heard the name **Leo Szilard** - I can safely make this bet because even with my degrees in physics and engineering (plus a deep interest in history) it took me a very long time to hear about him. Given how well the world knows about his inventions and the effect of this actions, it truly is surprising how little known this person is. Read on to find out how one man changed the world and impacted it in the most profound ways.
 
 <span class="img-width-400">
 ![Alternate text]({filename}/images/Szilard-portrait.jpg)
@@ -12,7 +12,7 @@ I bet you have not heard the name **Leo Szilard** - I can safely make this bet b
 
 Here are some highlights from the life of Leo Szilard - the Genius in the Shadows.
 
-[[ **Update** - this post was used as a source material for an answer on quora, for the question [**Who are some little known people who changed the world?**](http://www.quora.com/Who-are-some-little-known-people-that-changed-the-world/answer/Santanu-Diwan). Its one of the most upvoted answers to that question, which supports the assertion that Leo Szilard deserves to be known better. I hope that is enough motivation to not be turned away by the length of this essay.]]
+[[ **Update** - this post was used as source material for an answer on quora, for the question [**Who are some little known people who changed the world?**](http://www.quora.com/Who-are-some-little-known-people-that-changed-the-world/answer/Santanu-Diwan). Its one of the most upvoted answers to that question, which supports the assertion that Leo Szilard deserves to be known better. I hope that is enough motivation to not be turned away by the length of this essay.]]
 
 
 Born in 1898 in Budapest, Austria-Hungary, Leo Szilard was interested in Physics and Mathematics from a very early age. He won national level prizes in Mathematics and studied engineering at Budapest Technical University before being drafted into the army during WWI. However, he was hospitalized with Spanish Influenza and did not have to fight a battle on the front lines.
