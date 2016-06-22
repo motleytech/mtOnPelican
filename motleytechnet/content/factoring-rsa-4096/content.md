@@ -22,7 +22,7 @@ If you missed the news, read through these links first...
 
 Reading the first few posts on the above links should tell you that it wasn't a genuine factoring of a valid 4096 bit RSA key. However, even if it was a bogus key, the question now becomes - How did it get on the key servers in the first place?
 
-#### What went wrong?
+### What went wrong?
 
 There are a few theories around that...
 
@@ -65,7 +65,7 @@ How much better?
 
 The expected number of primes that you would have to generate before you get a composite number is $2^{128} > 10^{38}$. That's a really huge number of primes... and even then, the generated number won't have small prime divisors.
 
-###RSA with composite keys?
+### RSA with composite keys?
 
 Reading the last few paragraphs, its natural to wonder - what happens if the primes used in RSA are not really primes. After all, the algo under discussion does not 100% accurately guarantee that the 2048 bit prime that it generated is indeed prime.
 

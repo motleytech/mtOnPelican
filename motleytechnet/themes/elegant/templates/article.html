@@ -23,7 +23,7 @@
 {% block content %}
 <article>
 <div class="row-fluid">
-    <header class="page-header span10 offset2">
+    <header class="page-header span12">
     <h1><a href="{{ SITEURL }}/{{ article.url }}"> {{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} </a></h1>
     <span class="normal-font-color">
       published by {{ article.author }}
@@ -46,7 +46,7 @@
     </div>
     <div class="span8 article-content">
        {% else %}
-        <div class="span8 offset2 article-content">
+        <div class="span10 article-content">
             {% endif %}
 
             {% import '_includes/translations.html' as translations with context %}

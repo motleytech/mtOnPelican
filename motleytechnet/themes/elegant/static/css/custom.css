@@ -54,6 +54,13 @@ div.youtube-16x9-640 iframe{
   border-bottom: none !important;
 }
 
+
+article p:not(#list-of-translations):not(#post-share-links) a, article ol a, blockquote a, article div.article-content ul:not(.articles-timeline):not(.related-posts-list) a {
+  border-bottom: none;
+  color: #8375d7;
+  text-decoration: inherit;
+}
+
 /*
 CSS for Images
 */

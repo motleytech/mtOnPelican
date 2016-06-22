@@ -41,7 +41,7 @@ PLUGINS = [
 
 LANDING_PAGE_ABOUT = {
     'title': 'Stuff about me',
-    'details': "This is all so awesome."
+    'details': "Something about the site goes in here."
 }
 
 # Uncomment following line if you want document-relative URLs when developing
