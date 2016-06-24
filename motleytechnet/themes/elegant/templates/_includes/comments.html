@@ -1,5 +1,5 @@
 {% macro comments(article) %}
-    {% if DISQUS_SITENAME and SITEURL and article.status != 'draft' %}
+    {% if DISQUS_SITENAME and SITENAME and article.status != 'draft' %}
 <section>
 {% if article.comments_intro %}
 <p id="comment-message">{{ article.comments_intro }} </p>
@@ -35,9 +35,8 @@
 {% endmacro %}
 
 {% macro comments_script(article) %}
-    {% if DISQUS_SITENAME and SITEURL and article.status != 'draft' %}
+    {% if DISQUS_SITENAME and SITENAME and article.status != 'draft' %}
         {% from '_includes/disqus_scripts.html' import disqus_misc_scripts with context %}
         {{ disqus_misc_scripts() }}
     {% endif %}
 {% endmacro %}
-

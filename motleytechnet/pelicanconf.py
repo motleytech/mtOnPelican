@@ -44,5 +44,7 @@ LANDING_PAGE_ABOUT = {
     'details': "Something about the site goes in here."
 }
 
+DISQUS_SITENAME = "motleytech"
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
