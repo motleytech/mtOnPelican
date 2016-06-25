@@ -1,8 +1,10 @@
 Title: Gravity Train
-Date: 2016-06-11 15:25
+Date: 2014-04-11 15:25
 Category: Blog
-Tags: Physics, Mathematics, Gravity
+Tags: Physics, Mathematics, Gravity, Train
 Authors: Motleytech
+Disqus_Identifier: gravity_train
+
 
 <span class="img-width-400">
 ![Alternate text]({filename}/images/gravity_train_poster.jpg)

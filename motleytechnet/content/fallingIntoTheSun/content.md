@@ -1,8 +1,9 @@
 Title: Falling into  the sun
-Date: 2012-12-03 10:20
+Date: 2013-12-03 10:20
 Category: Blog
-Tags: Physics, Mathematics, Gravity, Pi, Sun, Earth, Integration
+Tags: Physics, Mathematics, Gravity, Pi, Sun, Earth
 Authors: Motleytech
+Disqus_Identifier: falling_into_the_sun
 
 
 Recently, I came across a gem of a physics problem, which had the awesome combination of being easy to comprehend, yet being surprisingly difficult to solve.

@@ -1,8 +1,10 @@
 Title: Leo Szilard - The Man who changed the World
-Date: 2016-06-14 11:47
+Date: 2014-08-03 04:27
 Category: Blog
-Tags: Leo Szilard, Fission, Manhattan Project, Atomic Bomb, WWII, History
+Tags: Leo Szilard, Fission, Manhattan Project, Atomic Bomb
 Authors: Motleytech
+Disqus_Identifier: cmsplugin-disqus-62
+
 
 I bet you have not heard the name **Leo Szilard** - I can safely make this bet because even with my degrees in physics and engineering (plus a deep interest in history) it took me a very long time to hear about him. Given how well the world knows about his inventions and the effect of this actions, it truly is surprising how little known this person is. Read on to find out how one man changed the world and impacted it in the most profound ways.
 

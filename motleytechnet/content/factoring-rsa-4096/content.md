@@ -1,9 +1,9 @@
 Title: On factoring of the 4096 bit RSA key
-Date: 2016-06-14 13:17
+Date: 2015-05-21 21:33
 Category: Blog
 Tags: Computing, Cryptography, RSA, Mathematics
 Authors: Motleytech
-Disqus_Identifier: cmsplugin-disqus-96
+Disqus_Identifier: on_factoring_rsa
 
 <span class="img-width-600">
 ![Alternate text]({filename}/images/system-failure.jpg)
