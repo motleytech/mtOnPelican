@@ -115,6 +115,31 @@ CSS for Images
   width: 600px;
 }
 
+#btngenerate {
+  margin-bottom: 10px;
+}
+
+.label-danger {
+  background-color: #D9534F;
+}
+
+#magicsquare table {
+  margin-left: auto;
+  margin-right: auto;
+  border-spacing: 2px;
+  border-collapse: separate;
+}
+
+#magicsquare table, td {
+  border: 1px solid #888;
+  text-align: center;
+  width: 3em;
+  height: 3em;
+  vertical-align: middle;
+  /*border-collapse: separate;
+  border-spacing: 2px;*/
+  font-family: cursive;
+}
 
 /*dropdown submenu related stuff*/
 .dropdown-submenu {

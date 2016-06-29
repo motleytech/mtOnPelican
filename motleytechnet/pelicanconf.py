@@ -32,7 +32,7 @@ AUTHOR_FEED_RSS = None
 DEFAULT_PAGINATION = 5
 
 THEME = "themes/elegant"
-STATIC_PATHS = ['images']
+STATIC_PATHS = ['images', 'js', 'css']
 
 PLUGIN_PATHS = ["plugins"]
 PLUGINS = [
