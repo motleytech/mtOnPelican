@@ -123,6 +123,12 @@ CSS for Images
   background-color: #D9534F;
 }
 
+@keyframes shine {
+    0%   {background-color: #FFF;}
+    20%  {background-color: #2F96B4;}
+    100% {background-color: #FFF;}
+}
+
 #magicsquare table {
   margin-left: auto;
   margin-right: auto;
@@ -140,6 +146,15 @@ CSS for Images
   border-spacing: 2px;*/
   font-family: cursive;
 }
+
+.article-content .arrows {
+    height: 40px;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+
 
 /*dropdown submenu related stuff*/
 .dropdown-submenu {
