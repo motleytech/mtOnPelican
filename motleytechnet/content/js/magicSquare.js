@@ -387,7 +387,7 @@ var magicSquare = function () {
     let sum = size * (size * size + 1) / 2
 
     $(divid).empty()
-    $(divid).append('<p>Common sum is ' + sum + '</p>')
+    $(divid).append('<p><b>Sum</b> : ' + sum + '</p>')
     $(divid).append(table)
 
     let [numbers, moves] = generateNumbersAndMoves(size)
