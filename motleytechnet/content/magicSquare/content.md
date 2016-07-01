@@ -49,7 +49,9 @@ The program uses an extraordinarily simple algorithm (which you might be able to
 An even easier way to understand the algorithm is to imagine repeating copies of our square in both the x and y directions. In that case, the rules become even simpler.
 
 1. Start at middle of top row and write 1 (all copies of the square also get a 1 in the same place).
-2. Move to the cell towards the top right. If cell is occupied, move one cell down instead. Write the next number (in the same cell in all copies) and repeat this step.
+2. Move to the cell towards the top right. If top-right cell is occupied, move one cell down instead. Write the next number (in the same cell in all copies) and repeat this step.
+
+Much easier than remembering 5 different steps.
 
 
 <div style="position: fixed">

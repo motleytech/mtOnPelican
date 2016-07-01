@@ -40,8 +40,8 @@ PLUGINS = [
 ]
 
 LANDING_PAGE_ABOUT = {
-    'title': 'Stuff about me',
-    'details': "Something about the site goes in here."
+    'title': 'Excursions of a mathematical programmer.',
+    'details': "One of these days, I have to write something in here."
 }
 
 DISQUS_SITENAME = "motleytech"

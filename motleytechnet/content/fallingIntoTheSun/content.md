@@ -107,7 +107,7 @@ Rearranging the variables around, we finally get
   $$T = \pi \frac{d^{3/2}}{\sqrt{8GM_s}}$$
 </div>
 
-As often happens often in interesting problems, we have journeyed from a simple equation (newton's law) to terrible looking intermediate results, divisions by zero, and challenging integrals... which all finally canceled out to give a simple answer.
+As often happens in interesting problems, we have journeyed from a simple equation (newton's law) to terrible looking intermediate results, divisions by zero, and challenging integrals... which all finally canceled out to give a simple answer.
 
 **Wait... there is a $\pi$ in the answer!!** How in the frigging cosmos did $\pi$ make its way into the answer. Well, we can go back and look at where it exactly came in... through the $tan^{-1}(+\infty)$ and $tan^{-1}(-\infty)$, which basically means that it popped out from a couple of singularities. It might also have something to do with the periodic oscillation that the earth might have experienced were it not going to be evaporated on contact with the sun. This is as close to magic as we get in mathematics, and yet another beautiful example of unexpected places where $\pi$ shows up.
 
@@ -119,7 +119,7 @@ or about 2.1 months.
 
 -------
 
-All this is excellent but I am also love programming. Its time to test this analytical solution with a numerical calculation.
+All this is excellent but I also love programming. Its time to test this analytical solution with a numerical calculation.
 
 I wrote a small python program to calculate the time by simulating the acceleration, velocity and position of the earth as it falls towards the sun. I have also plotted a graph denoting the distance of earth from the sun *vs* time.
 
