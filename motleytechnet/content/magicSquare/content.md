@@ -9,11 +9,11 @@ A conventional [magic square](http://en.wikipedia.org/wiki/Magic_square) of orde
 
 Surprisingly, it is very easy to create magic squares when n is odd. Magic squares of even n also exist, but creating them is comparatively more difficult.
 
-What follows is a program to create odd magic squares of any (reasonable) size. Give it a try... enter an odd number (3 to 49) and the program should reply with a magic square. The sum of each row, column and both diagonals will be the same.
+What follows is a program to create odd magic squares of any (reasonable) size. Give it a try... enter an odd number (3 to 49) and the program should reply with a magic square.
 
 <script src="/js/magicSquare.js"></script>
 
-<input id="sqsize" type="text" class="form-control" value="3" />
+<input id="sqsize" type="number" min="3" max="49" step="2" class="form-control" value="3" />
 <button id="btngenerate" onclick="magicSquare.onGenerate()" class="btn btn-info" type="button">Generate!</button>
 <span id="errorspan" class="label label-danger"></span>
 
