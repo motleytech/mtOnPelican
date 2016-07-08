@@ -1,5 +1,7 @@
 var sudokuSolver = function () {
 
+    let settings = {}
+
     let floor = Math.floor
 
     function time() {
@@ -139,6 +141,10 @@ var sudokuSolver = function () {
                 let val = ins[pos]
                 if (val !== 0) {
                     // update row, col and cell
+                    if (possb[pos][val] === undefined) {
+                        return false
+                    }
+                    
                     possb[pos] = {}
 
                     // update all
@@ -301,21 +307,31 @@ var sudokuSolver = function () {
         return dict
     }
 
+    function solveFromInput(inp) {
+        let sudokuInput = stringToList(inp)
+        let possibilities = range(9*9).map( x => dictFromKeys(range(1, 10), true) )
+        let possb = initPossibilities(possibilities, sudokuInput)
+        if (possb === false) {
+            console.error("No possibilities found")
+            return 'nopossb'
+        }
+
+        let st = time()
+        return solveSudoku(possb, sudokuInput)
+        let et = time()
+    }
+
     function runTests() {
         for (let data of test_cases) {
             let [name, inp, outp, valid] = data
             if (true) {
-                let sudokuInput = stringToList(inp)
-                let possibilities = range(9*9).map( x => dictFromKeys(range(1, 10), true) )
-                let possb = initPossibilities(possibilities, sudokuInput)
-                if (possb === false) {
-                    console.error("No possibilities found")
+                let st = time()
+                let result = solveFromInput(inp)
+                let et = time()
+
+                if (result === 'nopossb') {
                     continue
                 }
-
-                let st = time()
-                let result = solveSudoku(possb, sudokuInput)
-                let et = time()
 
                 if (result === false) {
                     let msg = `Failed to find solution for test "${name}". `
@@ -343,7 +359,142 @@ var sudokuSolver = function () {
 
     runTests()
 
+    function initialize(tablediv, progdiv) {
+        settings.tablediv = tablediv
+        settings.progdiv = progdiv
+
+        let table = createSudokuTable()
+        $(tablediv).empty()
+        $(tablediv).append(table)
+    }
+
+    function createInnerTable(ofr, ofc) {
+        let hstr = "<table class='innertable'>"
+        let id
+        for (let cr of range(3)) {
+            hstr += "<tr>"
+            for (let cc of range(3)) {
+                hstr += "<td>"
+                id = `rc_${ofr+cr}_${ofc+cc}`
+                hstr += `<input id='${id}' type="text" pattern="[1-9]" class="form-control sudokuinput" value=""/>`
+                hstr += "</td>"
+            }
+            hstr += "</tr>"
+        }
+        hstr += "</table>"
+        return hstr
+    }
+
+    function createSudokuTable() {
+        let htmlStr = "<table id='sudokutable'>"
+        let id
+
+        for (let cr of range(3)) {
+            htmlStr += "<tr>"
+            for (let cc of range(3)) {
+                htmlStr += '<td>'
+                htmlStr += createInnerTable(cr*3, cc*3)
+                htmlStr += "</td>"
+            }
+            htmlStr += "</tr>"
+        }
+
+        htmlStr += "</table>"
+        return htmlStr
+    }
+
+    function populateTable(res, inp) {
+        let idx
+        let el
+        for (let row of range(9)) {
+            for (let col of range(9)) {
+                idx = row*9 + col
+                if (inp[idx] === '.') {
+                    el = $(`#rc_${row}_${col}`)
+                    el.val(res[idx])
+                    el.addClass('bluebg')
+                }
+            }
+        }
+    }
+
+    function disableControls() {
+        $('#btnsolve').attr('disabled', '')
+        $('#btnreset').attr('disabled', '')
+        $('#statustext').text("Please wait. Working on it...")
+        $("#errortext").text("")
+    }
+
+    function enableControls() {
+        $('#btnsolve').removeAttr('disabled')
+        $('#btnreset').removeAttr('disabled')
+        $('#statustext').text("")
+    }
+
+    function startSolve() {
+        // read the values into a string
+        let inp = ''
+        let val
+        let valid = { '': '.' }
+        range(1, 10).map( x => (valid[x] = x))
+
+        for (let row of range(9)) {
+            for (let col of range(9)) {
+                val = $(`#rc_${row}_${col}`).val()
+                if (valid[val] !== undefined) {
+                    inp += valid[val]
+                } else {
+                    $('#errortext').text(`Invalid Input at (${row+1},${col+1}): "${val}".\nFix input and try again.`)
+                    setTimeout(enableControls, 200)
+                    return
+                }
+            }
+        }
+        console.log(inp)
+
+        let st = time()
+        let result = solveFromInput(inp)
+        let et = time()
+
+        if (result === 'nopossb') {
+            $('#errortext').text('Bad problem. No solution is possible')
+            setTimeout(enableControls, 200)
+            return
+        }
+
+        if (result === false) {
+            console.log('Failed to find solution.')
+            setTimeout(enableControls, 200)
+            return
+        } else {
+            console.log(formatSudoku(result))
+            console.log(checkSolution(result))
+            console.log(`Took ${et - st} ms`)
+            populateTable(result, inp)
+        }
+        setTimeout(enableControls, 200)
+    }
+
+    function onSolve() {
+        setTimeout(disableControls, 100)
+        setTimeout(startSolve, 200)
+    }
+
+    function onReset() {
+        for (let row of range(9)) {
+            for (let col of range(9)) {
+                let id = `#rc_${row}_${col}`
+                $(id).val('')
+                $(id).removeClass('bluebg')
+            }
+        }
+        $('#errortext').text('')
+    }
+
     return {
         solveSudoku: solveSudoku,
+        initialize: initialize,
+        onSolve: onSolve,
+        onReset: onReset,
     }
 }()

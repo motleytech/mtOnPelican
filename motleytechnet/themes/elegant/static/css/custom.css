@@ -208,3 +208,27 @@ CSS for Images
 .navbar .nav .li-expanded a {
   padding-right: 25px;
 }
+
+#sudokutable {
+    width: auto;
+    border: 2px solid #666;
+}
+
+input.sudokuinput {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    border: none;
+}
+
+#sudokudiv table td {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+}
+
+td input.bluebg {
+    background-color: #cee4ff;
+}

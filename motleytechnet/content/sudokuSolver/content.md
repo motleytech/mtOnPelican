@@ -5,13 +5,22 @@ Tags: Sudoku, Computing
 Authors: Motleytech
 Disqus_Identifier: sudoku_solver
 
-<div id='sudokudiv'>
-Sudoku table and submit button go in here.
+If a problem has more than one solution, this program will randomly find one of the solutions. For example, when less than 16 clues are provided, the solution is not unique. You can even try to solve a problem with 0 clues... the program will respond with a random (correctly filled) sudoku - Click on "Solve" button to give it a try.
 
-The progress bar also goes in here.
+<div id='sudokudiv'>
 </div>
 
+<button id="btnreset" onclick="sudokuSolver.onReset()" class="btn btn-danger" type="button">Reset</button>
+<button id="btnsolve" onclick="sudokuSolver.onSolve()" class="btn btn-info" type="button">Solve!</button>
+<span id="statustext"></span>
+
+<span id="errortext" style="color:red"></span>
+
 <script src="/js/sudokuSolver.js"></script>
+
+<script>
+    window.onload = function () { sudokuSolver.initialize('#sudokudiv', '#progressbar') }
+</script>
 
 <noscript style="color:red">
   You must have javascript enabled in order to use this application.
