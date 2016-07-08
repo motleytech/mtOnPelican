@@ -144,7 +144,7 @@ var sudokuSolver = function () {
                     if (possb[pos][val] === undefined) {
                         return false
                     }
-                    
+
                     possb[pos] = {}
 
                     // update all
@@ -357,8 +357,6 @@ var sudokuSolver = function () {
         }
     }
 
-    runTests()
-
     function initialize(tablediv, progdiv) {
         settings.tablediv = tablediv
         settings.progdiv = progdiv
@@ -496,5 +494,6 @@ var sudokuSolver = function () {
         initialize: initialize,
         onSolve: onSolve,
         onReset: onReset,
+        runTests: runTests,
     }
 }()

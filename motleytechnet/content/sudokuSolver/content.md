@@ -5,7 +5,9 @@ Tags: Sudoku, Computing
 Authors: Motleytech
 Disqus_Identifier: sudoku_solver
 
-If a problem has more than one solution, this program will randomly find one of the solutions. For example, when less than 16 clues are provided, the solution is not unique. You can even try to solve a problem with 0 clues... the program will respond with a random (correctly filled) sudoku - Click on "Solve" button to give it a try.
+A simple sudoku solver implemented in Javascript. This is a port of my [previous Python solution](https://github.com/motleytech/pybook/blob/master/books/Sudoku_solver.ipynb).
+
+This program uses a randomized approach... which implies that if a problem has more than one solution, this program will randomly find one of the solutions. You can even try to solve a problem with no clues... the program will respond with a random (correctly filled) sudoku - click on "Solve" to give it a try.
 
 <div id='sudokudiv'>
 </div>
