@@ -201,7 +201,7 @@ var sudokuSolver = function () {
         for (let guess of guessValues) {
             let possb2 = deepcopy(possb)
             possb2[guessPos] = {}
-            ss2[guessPos] = guess
+            ss2[guessPos] = parseInt(guess)
             if (updateAll(possb2, guessPos, guess) === false) {
                 return false
             }
@@ -287,7 +287,7 @@ var sudokuSolver = function () {
 
 
     function stringToList(inp) {
-        inp = inp.replace('.', '0')
+        inp = inp.replace(/\./g, '0')
         let result = []
         for (let x of inp) {
           result.push(x)
@@ -314,7 +314,7 @@ var sudokuSolver = function () {
                 let possibilities = range(9*9).map(function (x) { return dictFromKeys(range(1, 10), true) })
                 let possb = initPossibilities(possibilities, sudokuInput)
                 if (possb === false) {
-                    console.log("No possibilities found")
+                    console.error("No possibilities found")
                     continue
                 }
 
@@ -323,24 +323,24 @@ var sudokuSolver = function () {
                 let et = time()
 
                 if (result === false) {
-                    console.log("\nFailed to find solution")
+                    console.warn("\nFailed to find solution")
                     if (valid === true) {
-                        console.log("Unexpected failure")
+                        console.error("Unexpected failure")
                     } else {
-                        console.log("But it is an expected failue... rejoice")
+                        console.info("But it is an expected failure... rejoice")
                     }
 
                     continue
                 } else {
                     console.log(formatSudoku(result))
                     console.log(checkSolution(result))
-                    console.log(`Took ${et - st} seconds`)
+                    console.log(`Took ${et - st} ms`)
                 }
 
                 if (listToString(result) === outp) {
-                    console.log(`Test \"${name}\" passed.`)
+                    console.info(`Test \"${name}\" passed.`)
                 } else {
-                    console.log(`Test \"${name}\" failed.`)
+                    console.error(`Test \"${name}\" failed.`)
                 }
             }
         }
