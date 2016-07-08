@@ -1,5 +1,5 @@
 Title: Magic Squares
-Date: 2015-09-02 16:25
+Date: 2015-05-29 16:25
 Category: Blog
 Tags: Magic Square, Computing, Mathematics
 Authors: Motleytech

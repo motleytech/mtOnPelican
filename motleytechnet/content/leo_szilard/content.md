@@ -1,5 +1,5 @@
 Title: Leo Szilard - The Man who changed the World
-Date: 2014-08-03 04:27
+Date: 2014-03-15 04:27
 Category: Blog
 Tags: Leo Szilard, Fission, Manhattan Project, Atomic Bomb
 Authors: Motleytech

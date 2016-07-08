@@ -1,5 +1,5 @@
 Title: Python websocket server and web client
-Date: 2015-01-22 19:54
+Date: 2014-09-03 19:54
 Category: Blog
 Tags: Computing, Python, Websocket
 Authors: Motleytech

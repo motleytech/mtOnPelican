@@ -1,5 +1,5 @@
 Title: Importing ipython notebook into another notebook
-Date: 2014-12-14 13:17
+Date: 2014-08-29 13:13
 Category: Blog
 Tags: Computing, Ipython, Python, import
 Authors: Motleytech
