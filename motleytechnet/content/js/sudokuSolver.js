@@ -155,14 +155,13 @@ var sudokuSolver = function () {
     // creates new dict with same keys and values
     function copydict(dict) {
         let newdict = {}
-        for (let key of Object.keys(dict)) {
-            newdict[key] = dict[key]
-        }
+
+        Object.keys(dict).forEach(key => (newdict[key] = dict[key]))
         return newdict
     }
 
     function deepcopy(listOfDicts) {
-        return listOfDicts.map(function (dict) { return copydict(dict) })
+        return listOfDicts.map( dict => copydict(dict) )
     }
 
     function solveSudoku(possb, ss) {
@@ -216,7 +215,7 @@ var sudokuSolver = function () {
 
     function getCell(sdk, cell) {
         let cs = floor(cell/3)*27 + (cell%3)*3
-        let cellv = [0,1,2,9,10,11,18,19,20].map(function (x) { return sdk[cs + x]})
+        let cellv = [0,1,2,9,10,11,18,19,20].map( x => sdk[cs + x] )
         return cellv
     }
 
@@ -242,7 +241,7 @@ var sudokuSolver = function () {
 
         // check rows
         for (let rr of range(9)) {
-            currlist = xrange(9).map(function (x) { return outs[rr*9 + x] })
+            currlist = xrange(9).map( x => outs[rr*9 + x] )
             if (listcmp(list9, currlist) === false) {
                 console.log(`Error in row ${rr}.\nRow = ${currlist}`)
                 return false
@@ -251,7 +250,7 @@ var sudokuSolver = function () {
 
         // check columns
         for (let cc of range(9)) {
-            currlist = xrange(9).map(function (x) { return outs[x*9 + cc] })
+            currlist = xrange(9).map( x => outs[x*9 + cc] )
             if (listcmp(list9, currlist) === false) {
                 console.log(`Error in column ${cc}.\nCol = ${currlist}`)
                 return false
@@ -273,13 +272,9 @@ var sudokuSolver = function () {
 
     function formatSudoku(outs) {
         let data = outs
-        // data = [' '.join(data[x*3:(x+1)*3]) for x in range(27)]
-        data = range(27).map(function (x) { return data.slice(x*3, x*3 + 3).join(' ') })
-        // data = ['   '.join(data[x*3:(x+1)*3]) for x in range(9)]
-        data = range(9).map(function (x) { return data.slice(x*3, x*3 + 3).join('   ') })
-        // data = ['\n'.join(data[x*3:(x+1)*3]) for x in range(3)]
-        data = range(3).map(function (x) { return data.slice(x*3, x*3 + 3).join('\n') })
-        // data = '\n\n'.join(data)
+        data = range(27).map( x => data.slice(x*3, x*3 + 3).join(' ') )
+        data = range(9).map( x => data.slice(x*3, x*3 + 3).join('   ') )
+        data = range(3).map( x => data.slice(x*3, x*3 + 3).join('\n') )
         data = data.join('\n\n')
 
         return '\n' + data + '\n'
@@ -302,7 +297,7 @@ var sudokuSolver = function () {
 
     function dictFromKeys(ks, val) {
         let dict = {}
-        ks.forEach(function (k) { dict[k] = val })
+        ks.forEach( k => (dict[k] = val) )
         return dict
     }
 
@@ -311,7 +306,7 @@ var sudokuSolver = function () {
             let [name, inp, outp, valid] = data
             if (true) {
                 let sudokuInput = stringToList(inp)
-                let possibilities = range(9*9).map(function (x) { return dictFromKeys(range(1, 10), true) })
+                let possibilities = range(9*9).map( x => dictFromKeys(range(1, 10), true) )
                 let possb = initPossibilities(possibilities, sudokuInput)
                 if (possb === false) {
                     console.error("No possibilities found")
@@ -323,11 +318,11 @@ var sudokuSolver = function () {
                 let et = time()
 
                 if (result === false) {
-                    console.warn("\nFailed to find solution")
+                    let msg = `Failed to find solution for test "${name}". `
                     if (valid === true) {
-                        console.error("Unexpected failure")
+                        console.error(msg + "Unexpected failure")
                     } else {
-                        console.info("But it is an expected failure... rejoice")
+                        console.warn(msg + "But it is an expected failure... rejoice")
                     }
 
                     continue
