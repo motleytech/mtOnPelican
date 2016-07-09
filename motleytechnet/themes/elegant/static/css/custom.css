@@ -232,3 +232,8 @@ input.sudokuinput {
 td input.bluebg {
     background-color: #cee4ff;
 }
+
+i.hlitalics {
+    background-color: #eee;
+    padding: 0px 5px;
+}
